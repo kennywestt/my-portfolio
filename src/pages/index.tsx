@@ -8,15 +8,14 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header/>
-      <main>
-        <Hero/>
-        <AboutSection/>
-        <ProjectSection/>
-        <ContactSection />
-      </main>
-      <Footer />
-
+        <Header />
+        <Hero />
+        <main className="relative z-10 pt-[100vh]">
+          <AboutSection />
+          <ProjectSection />
+          <ContactSection />
+          <Footer />
+        </main>
     </>
   );
 }

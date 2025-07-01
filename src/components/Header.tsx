@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 px-6 py-4 bg-blue-600 shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 bg-blue-500 shadow-md">
       <div className="max-w-screen-xl mx-auto w-full flex items-center justify-between">
         {/* 왼쪽 비움 */}
         <div className="flex-1" />
