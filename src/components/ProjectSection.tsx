@@ -1,12 +1,91 @@
+import { useState } from "react";
+import ProjectCard from "./ProjectCard";
+import { Project } from "./ProjectCard";
+import StarsBackground from "./StarsBackground";
+
+const FILTERS = ["All", "Team", "Personal"] as const;
+type Filter = typeof FILTERS[number];
+
+// 임시 샘플 프로젝트 데이터
+const PROJECTS: Project[] = [
+  {
+    title: "Renewal Hotel",
+    period: "2025.03 ~ 2025.04",
+    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
+    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Team",
+  },
+  {
+    title: "Renewal Hotel - 리뉴얼 호텔",
+    period: "2025.03 ~ 2025.04",
+    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
+    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Team",
+  },
+  {
+    title: "Renewal Hotel - 리뉴얼 호텔",
+    period: "2025.03 ~ 2025.04",
+    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
+    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Team",
+  },
+  {
+    title: "Renewal Hotel - 리뉴얼 호텔",
+    period: "2025.03 ~ 2025.04",
+    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
+    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Personal",
+  },
+];
+
 export default function ProjectSection() {
-    return (
-      <section id="projects" className="py-20">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8">Projects</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* 프로젝트 카드를 추가하세요 */}
-          </div>
+  const [filter, setFilter] = useState<Filter>("All");
+
+  const filtered = filter === "All" ? PROJECTS : PROJECTS.filter(p => p.type === filter);
+
+  return (
+    <section id="projects" className="relative pt-24 pb-48 min-h-screen text-white bg-black">
+      <StarsBackground />
+      <div className="max-w-screen-xl mx-auto md:px-24">
+        <h2 className="text-4xl font-extrabold mb-8 tracking-tight">Projects</h2>
+        {/* 상단 필터 + 개수 */}
+        <div className="flex gap-2 items-center mb-8">
+          {FILTERS.map(f => (
+            <button
+              key={f}
+              onClick={() => setFilter(f)}
+              className={`px-5 py-2 rounded-full text-base font-semibold transition-all
+                border-2
+                ${filter === f
+                  ? "bg-white text-gray-900 border-white shadow"
+                  : "bg-gray-800/80 text-gray-300 border-gray-700 hover:bg-gray-700"}`}
+            >
+              {f}
+            </button>
+          ))}
+          <span className="ml-4 text-xl text-cyan-300 font-bold">
+            {filtered.length} Project{filtered.length > 1 ? "s" : ""}
+          </span>
         </div>
-      </section>
-    )
-  }
+        {/* 프로젝트 카드 리스트 */}
+        <div className="flex flex-col gap-6">
+          {filtered.map((project, idx) => (
+            <ProjectCard key={idx} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

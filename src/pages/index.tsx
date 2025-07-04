@@ -4,18 +4,21 @@ import AboutSection from "@/components/AboutSection";
 import ProjectSection from "@/components/ProjectSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import StarsBackground from "@/components/StarsBackground";
 
 export default function Home() {
   return (
     <>
-        <Header />
+
+      <Header />
+      <main>
         <Hero />
-        <main className="relative z-10 pt-[100vh]">
-          <AboutSection />
-          <ProjectSection />
-          <ContactSection />
-          <Footer />
-        </main>
+        <AboutSection />
+        <ProjectSection />
+        <ContactSection />
+        <Footer />
+        {/* <FloatingMenu /> */}
+      </main>
     </>
   );
 }
