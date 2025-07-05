@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Project } from "./ProjectCard";
-import StarsBackground from "./StarsBackground";
 
 const FILTERS = ["All", "Team", "Personal"] as const;
 type Filter = typeof FILTERS[number];
@@ -9,7 +8,7 @@ type Filter = typeof FILTERS[number];
 // 임시 샘플 프로젝트 데이터
 const PROJECTS: Project[] = [
   {
-    title: "Renewal Hotel",
+    title: "Hotel Renewal",
     period: "2025.03 ~ 2025.04",
     shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
     desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
@@ -17,36 +16,44 @@ const PROJECTS: Project[] = [
     skills: ["React", "Node.js", "MySQL", "Toss Payments"],
     tags: ["팀", "웹", "메인"],
     type: "Team",
+    githubUrl: "https://github.com/kennywestt/shilla_project",
+    siteUrl: "https://kennywest.tistory.com/",
   },
   {
-    title: "Renewal Hotel - 리뉴얼 호텔",
-    period: "2025.03 ~ 2025.04",
-    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
+    title: "Portfolio",
+    period: "2025.07 ~ 2025.07",
+    shortDesc: "개인 포트폴리오 웹사이트트",
     desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
     image: "/hotelProject.png",
     skills: ["React", "Node.js", "MySQL", "Toss Payments"],
-    tags: ["팀", "웹", "메인"],
-    type: "Team",
-  },
-  {
-    title: "Renewal Hotel - 리뉴얼 호텔",
-    period: "2025.03 ~ 2025.04",
-    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
-    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
-    image: "/hotelProject.png",
-    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
-    tags: ["팀", "웹", "메인"],
-    type: "Team",
-  },
-  {
-    title: "Renewal Hotel - 리뉴얼 호텔",
-    period: "2025.03 ~ 2025.04",
-    shortDesc: "신라호텔 사이트 리뉴얼 프로젝트",
-    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
-    image: "/hotelProject.png",
-    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
-    tags: ["팀", "웹", "메인"],
+    tags: ["개인", "웹", "메인"],
     type: "Personal",
+    githubUrl: "https://github.com/kennywestt/shilla_project",
+    siteUrl: "https://kennywest.tistory.com/",
+  },
+  {
+    title: "Eazypizy",
+    period: "2023.03 ~ 2023.06",
+    shortDesc: "흡연구역 및 금연구역 위치 확인 앱",
+    desc: "신라호텔 공식 사이트의 UI/UX를 개선하고, 예약 시스템을 전면 리뉴얼한 팀 프로젝트입니다. 메인, 예약, 고객센터 등 전체 페이지 반응형 구현과 결제 API 연동, MySQL 백엔드와의 데이터 흐름 설계까지 경험했습니다.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Team",
+    githubUrl: "https://github.com/kennywestt/shilla_project",
+    siteUrl: "https://kennywest.tistory.com/",
+  },
+  {
+    title: "Perfume Renewal",
+    period: "2025.01 ~ 2025.02",
+    shortDesc: "조말론 향수 리뉴얼 프로젝트",
+    desc: "조말론 공식 사이트의 UI/UX를 개선함 리액트 네이티브로 구현.",
+    image: "/hotelProject.png",
+    skills: ["React", "Node.js", "MySQL", "Toss Payments"],
+    tags: ["팀", "웹", "메인"],
+    type: "Team",
+    githubUrl: "https://github.com/kennywestt/shilla_project",
+    siteUrl: "https://kennywest.tistory.com/",
   },
 ];
 
@@ -56,9 +63,8 @@ export default function ProjectSection() {
   const filtered = filter === "All" ? PROJECTS : PROJECTS.filter(p => p.type === filter);
 
   return (
-    <section id="projects" className="relative pt-24 pb-48 min-h-screen text-white bg-black">
-      <StarsBackground />
-      <div className="max-w-screen-xl mx-auto md:px-24">
+    <section id="projects" className="relative pt-24 pb-48 px-12 min-h-screen text-white [background-color:rgba(20,23,38)]">
+      <div className="max-w-screen-xl mx-auto md:px-36">
         <h2 className="text-4xl font-extrabold mb-8 tracking-tight">Projects</h2>
         {/* 상단 필터 + 개수 */}
         <div className="flex gap-2 items-center mb-8">
@@ -80,7 +86,7 @@ export default function ProjectSection() {
           </span>
         </div>
         {/* 프로젝트 카드 리스트 */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-30">
           {filtered.map((project, idx) => (
             <ProjectCard key={idx} project={project} />
           ))}
