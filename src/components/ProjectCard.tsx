@@ -1,20 +1,23 @@
-export type Project = {
-    title: string;
-    period: string;        // 날짜기간
-    shortDesc: string;     // 간단설명
-    desc: string;          // 자세한 설명
-    image?: string;
-    skills: string[];      // 사용기술
-    tags: string[];
-    type: "All" | "Team" | "Personal";
-    githubUrl?: string; // GitHub 레포지토리 URL
-    siteUrl?: string;  // 배포된 사이트 URL
-  };
+import { SiNotion } from "react-icons/si";
 
-  export default function ProjectCard({ project }: { project: Project }) {
+export type Project = {
+  title: string;
+  period: string;        // 날짜기간
+  shortDesc: string;     // 간단설명
+  desc: string;          // 자세한 설명
+  images?: string; // Swiper 지원 위해 string[];
+  skills: string[];      // 사용기술
+  tags: string[];
+  type: "All" | "Team" | "Personal";
+  githubUrl?: string; // GitHub 레포지토리 URL
+  siteUrl?: string;  // 배포된 사이트 URL
+  notionUrl?: string;
+};
+
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="z-10 bg-gray-800/40 backdrop-filter backdrop-blur-sm border border-gray-700/70 shadow-xl rounded-2xl flex flex-col
-                  transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-purple-500/50 hover:bg-gray-800/60
+                  transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-white/60
                   transform hover:-translate-y-1 overflow-hidden">
 
       {/* 상단 콘텐츠 및 이미지 래퍼 (flex-row로 가로 배치) */}
@@ -23,7 +26,7 @@ export type Project = {
         {/* max-h-XX 및 overflow-y-auto custom-scrollbar 제거 */}
         <div className="flex flex-col justify-between basis-full md:basis-4/10 p-6 md:p-6">
           <div>
-            <h3 className="text-2xl md:text-4xl font-extrabold text-white mb-2 leading-tight">
+            <h3 className="text-3xl md:text-3xl font-extrabold text-white mb-2 leading-tight">
               {project.title}
             </h3>
             <p className="text-lg text-gray-400 mb-4 font-medium">
@@ -51,13 +54,13 @@ export type Project = {
         </div>
 
         {/* 오른쪽(이미지) 영역 */}
-        {project.image && (
+        {project.images && (
           // 이미지 컨테이너 자체에 고정된 높이를 부여하여 카드 높이 제어에 기여
           <div className="basis-full md:basis-6/10">
             <div className="w-full relative h-60 md:h-full md:min-h-[450px] md:max-h-[500px] rounded-t-xl md:rounded-l-none md:rounded-tr-2xl overflow-hidden
                             shadow-lg transform transition-all duration-300 ease-in-out hover:scale-[1.005] hover:shadow-xl">
               <img
-                src={project.image}
+                src={project.images}
                 alt={project.title}
                 className="object-cover object-top w-full h-full"
               />
@@ -73,7 +76,7 @@ export type Project = {
       {/* 하단 푸터 영역: 태그와 링크를 포함, 카드 전체 너비로 확장 */}
       {(project.tags.length > 0 || project.githubUrl || project.siteUrl) && (
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 p-4
-                        bg-gray-900/50 border-t border-gray-700/70 rounded-b-2xl">
+                        bg-gradient-to-r from-gray-800/80 to-gray-700/60 border-t border-gray-700/70 rounded-b-2xl">
           {/* 태그 영역 (왼쪽) */}
           {project.tags.length > 0 && (
             <div className="flex flex-wrap justify-center sm:justify-start gap-2">
@@ -92,6 +95,18 @@ export type Project = {
           {/* GitHub 및 사이트 링크 아이콘 영역 (오른쪽) */}
           {(project.githubUrl || project.siteUrl) && (
             <div className="flex justify-center sm:justify-end gap-4">
+              {project.notionUrl && (
+                <a
+                  href={project.notionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1 group"
+                  title="Notion"
+                >
+                  <SiNotion className="h-6 w-6" />
+                  <span className="text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Notion</span>
+                </a>
+              )}
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
@@ -132,4 +147,3 @@ export type Project = {
   );
 }
 
-  

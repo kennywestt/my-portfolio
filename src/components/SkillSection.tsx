@@ -183,20 +183,20 @@ export default function SkillSection() {
   const [active, setActive] = useState<Category>("Language");
 
   return (
-    <section className="mt-16 text-[#c9d6e3] font-[Pretendard]">
-      {/* 최상단 전체 제목 */}
+    <section className="mt-10 md:mt-16 px-2 md:px-0 text-[#c9d6e3] font-[Pretendard] w-full">
       <div className="mb-10 z-10">
         <h2 className="text-4xl font-extrabold text-white tracking-tight">
           <span className="text-cyan-400 mr-2">#</span>Skills
         </h2>
       </div>
-      <div className="flex gap-30 z-10">
-        {/* 왼쪽 세로 카테고리 탭 */}
-        <nav className="flex flex-col pt-8 gap-2 min-w-[140px]">
+      {/* 반응형 레이아웃 */}
+      <div className="flex flex-col md:flex-row gap-8 z-10">
+        {/* 카테고리 탭 (반응형, 좌우 스크롤) */}
+        <nav className="flex flex-row md:flex-col gap-2 md:pt-8 min-w-0 md:min-w-[120px] w-full md:w-auto overflow-x-auto whitespace-nowrap">
           {CATEGORY.map((cat) => (
             <button
               key={cat}
-              className={`text-left px-4 py-2 text-lg rounded transition-all border-l-4 ${
+              className={`flex-1 md:flex-none text-left px-3 md:px-4 py-2 text-base md:text-lg rounded transition-all border-l-4 ${
                 active === cat
                   ? "text-cyan-400 border-cyan-400 bg-white/5 font-semibold"
                   : "border-transparent hover:text-cyan-300"
@@ -207,28 +207,26 @@ export default function SkillSection() {
             </button>
           ))}
         </nav>
-
-        {/* 오른쪽: 현재 카테고리 제목 + 스킬 리스트 */}
-        <div className="flex-1">
-          {/* “Skill Stack @ Language” 헤더 (카테고리별) */}
-          <h3 className="text-2xl font-bold text-white mb-4">
+        {/* 스킬 리스트 */}
+        <div className="flex-1 min-w-0 max-w-2xl mx-auto px-2 md:px-8">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
             <span className="text-cyan-400">{active}</span>
           </h3>
           <div className="space-y-6">
             {SKILL_LIST[active].map((skill) => (
-              <div key={skill.name} className="flex items-center gap-6 group pb-2">
-                {/* 네온 원형 아이콘 */}
-                <span className="relative flex items-center justify-center w-20 h-20">
+              <div key={skill.name} className="flex items-center gap-4 md:gap-6 pb-2">
+                {/* 네온 원형 아이콘 (반응형 + aspect-square) */}
+                <span className="relative flex items-center justify-center w-12 h-12 md:w-20 md:h-20 aspect-square">
                   <span className="absolute w-full h-full rounded-full border-4 border-cyan-400/40 blur-md opacity-70" />
                   <span className="absolute w-full h-full rounded-full border-2 border-cyan-400" />
-                  <span className="relative text-5xl bg-[#1a2230] rounded-full w-16 h-16 flex items-center justify-center">
+                  <span className="relative text-2xl md:text-4xl bg-[#1a2230] rounded-full w-10 h-10 md:w-16 md:h-16 flex items-center justify-center aspect-square">
                     {skill.icon()}
                   </span>
                 </span>
                 {/* 이름/설명 */}
                 <div>
-                  <div className="text-xl font-bold text-white">{skill.name}</div>
-                  <div className="text-gray-300 text-base mt-1">{skill.description}</div>
+                  <div className="text-base md:text-xl font-bold text-white">{skill.name}</div>
+                  <div className="text-gray-300 text-xs md:text-base mt-1">{skill.description}</div>
                 </div>
               </div>
             ))}

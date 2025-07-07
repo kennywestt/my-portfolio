@@ -11,7 +11,7 @@ export default function Hero() {
 <div className="flex flex-col items-center">
       <div className="relative pt-60 text-left">
         <h1 className="text-4xl font-bold mb-4 animate-fade-down animate-once text-white">
-          프론트엔드 개발자 이경근입니다.
+          안녕하세요. 저는 웹 개발자 이경근입니다.
         </h1>
         <p className="text-white mb-10" data-aos="fade-up" data-aos-delay="200" >
           사용자 경험을 최우선으로 만드는 프론트엔드 개발자입니다.

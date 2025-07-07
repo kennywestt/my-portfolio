@@ -2,7 +2,7 @@ import SkillSection from "./SkillSection";
 
 export default function AboutSection() {
     return (
-      <section id="about" className="relative z-10 pt-24 pb-24 min-h-screen [background-color:rgba(20,23,38)]"
+      <section id="about" className="relative z-10 pt-24 pb-24 px-12 min-h-screen [background-color:rgba(20,23,38)]"
       >
       <div className="max-w-screen-xl mx-auto md:px-36">
         <h2 className="text-4xl font-bold mb-8 text-white">About Me</h2>
