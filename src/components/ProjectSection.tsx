@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
     shortDesc: "흡연구역 및 금연구역 위치 확인 앱",
     desc: "흡연자들을 위한 위치 기반 Android 앱으로 사용자가 현재 위치와 가까운 흡연구역 및 금연구역 정보를 확인하며 금연 계획 수립에도 도움을 받을 수 있도록 제작한 서비스입니다.",
     images: "/easypizy_main.png",
-    skills: ["Kotlin", "Android SDK","MVVM"],
+    skills: ["Kotlin", "Android SDK", "MVVM"],
     tags: ["팀", "앱", "메인"],
     type: "Team",
     // notionUrl: "https://like-mars-d0f.notion.site/1963b361337e80c5a305cb527a2ed52a?pvs=74",
@@ -69,33 +69,38 @@ export default function ProjectSection() {
   return (
     <section id="projects" className="relative pt-24 pb-48 px-12 min-h-screen text-white [background-color:rgba(20,23,38)]">
       <div className="max-w-screen-xl mx-auto md:px-36">
-      <h2 className="text-4xl font-bold text-white mb-12 flex items-center w-full gap-4">
-            {/* 왼쪽 라인 */}
-            <div className="w-10 h-px bg-slate-500" />
+        <h2 className="text-4xl font-bold text-white mb-12 flex items-center w-full gap-4">
+          {/* 왼쪽 라인 */}
+          <div className="w-10 h-px bg-slate-500" />
 
-            {/* 텍스트 */}
-            <span className="whitespace-nowrap text-slate-300">Projects</span>
+          {/* 텍스트 */}
+          <span className="whitespace-nowrap text-slate-300">Projects</span>
 
-            {/* 오른쪽 라인 */}
-            <div className="flex-grow h-px bg-gradient-to-r from-slate-500 via-slate-400 to-slate-600" />
-          </h2>
+          {/* 오른쪽 라인 */}
+          <div className="flex-grow h-px bg-gradient-to-r from-slate-500 via-slate-400 to-slate-600" />
+        </h2>
         {/* 상단 필터 + 개수 */}
-        <div className="flex gap-2 items-center mb-8">
-          {FILTERS.map(f => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`px-5 py-2 rounded-full text-base font-semibold transition-all
-                border-2
-                ${filter === f
-                  ? "bg-white text-gray-900 border-white shadow"
-                  : "bg-gray-800/80 text-gray-300 border-gray-700 hover:bg-gray-700"}`}
-            >
-              {f}
-            </button>
-          ))}
-          <span className="ml-4 text-xl text-slate-400 font-bold">
-            {filtered.length} Project{filtered.length > 1 ? "s" : ""}
+        <div className="relative mb-2 flex flex-wrap items-center w-full">
+          {/* 버튼 묶음: 가운데 정렬 */}
+          <div className="flex gap-2 flex-wrap justify-center w-full">
+            {FILTERS.map(f => (
+              <button
+                key={f}
+                onClick={() => setFilter(f)}
+                className={`px-5 py-2 rounded-full text-base font-semibold transition-all
+          border-2
+          ${filter === f
+                    ? "bg-white text-gray-900 border-white shadow"
+                    : "bg-gray-800/80 text-gray-300 border-gray-700 hover:bg-gray-700"}`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          {/* 오른쪽 숫자 */}
+          <span className="text-sm md:text-base text-slate-400 font-bold ml-auto pr-4 pt-14">
+            <span className="text-slate-100">{filtered.length}</span> Project{filtered.length > 1 ? "s" : ""}
           </span>
         </div>
         {/* 프로젝트 카드 리스트 */}
