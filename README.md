@@ -2,10 +2,10 @@
 
 ![cover](public/porfolio_main.png)
 
-개발자 이경근의 포트폴리오 웹사이트입니다.
-개발의 시작을 빅뱅과 같이 애니메이션으로 표현하였습니다.
-Next.js, TypeScript, TailwindCSS, Three.js 등을 활용해 제작하였으며
-반응형 인터페이스와 인터랙티브한 UI/UX 구성에 중점을 두었습니다.
+개발자 이경근의 포트폴리오 웹사이트입니다.<br>
+개발의 시작을 빅뱅과 같이 애니메이션으로 표현하였습니다.<br>
+Next.js, TypeScript, TailwindCSS, Three.js 등을 활용해 제작하였으며<br>
+반응형 인터페이스와 인터랙티브한 UI/UX 구성에 중점을 두었습니다.<br>
 
 ---
 
