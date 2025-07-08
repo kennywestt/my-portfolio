@@ -1,5 +1,3 @@
-import StarsBackground from "./StarsBackground";
-
 export default function Footer() {
     return (
       <footer className="relative py-6 [background-color:rgba(20,23,38,1)] ">

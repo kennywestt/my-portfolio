@@ -1,5 +1,3 @@
-import StarsBackground from "./StarsBackground";
-
 export default function ContactSection() {
     return (
       <div className="bg-black">
