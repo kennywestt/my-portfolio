@@ -185,9 +185,16 @@ export default function SkillSection() {
   return (
     <section className="mt-10 md:mt-16 px-2 md:px-0 text-[#c9d6e3] font-[Pretendard] w-full">
       <div className="mb-10 z-10">
-        <h2 className="text-4xl font-extrabold text-white tracking-tight">
-          <span className="text-cyan-400 mr-2">#</span>Skills
-        </h2>
+      <h2 className="text-4xl font-bold text-white mb-12 flex items-center w-full gap-4">
+            {/* 왼쪽 라인 */}
+            <div className="w-10 h-px bg-slate-500" />
+
+            {/* 텍스트 */}
+            <span className="whitespace-nowrap text-slate-300">Skills</span>
+
+            {/* 오른쪽 라인 */}
+            <div className="flex-grow h-px bg-gradient-to-r from-slate-500 via-slate-400 to-slate-600" />
+          </h2>
       </div>
       {/* 반응형 레이아웃 */}
       <div className="flex flex-col md:flex-row gap-8 z-10">

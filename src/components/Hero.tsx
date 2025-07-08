@@ -27,9 +27,9 @@ export default function Hero() {
         </div>
         <div className="relative mt-8">
           <img
-            src="/hotelProject.png"
+            src="/profile.svg"
             alt="profile"
-            className="w-60 h-60 rounded-full border-4 border-white shadow-lg object-cover"
+            className="w-60 h-60 object-cover"
           />
         </div>
         <p className="text-sm mt-5 text-slate-200"> {/* 글자 크기 조절 */}
