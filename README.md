@@ -1,6 +1,6 @@
 # 🧑‍💻 Portfolio - 이경근
 
-![cover](public/porfolio_project_part.png)
+![cover](public/porfolio_main.png)
 
 개발자 이경근의 포트폴리오 웹사이트입니다.
 개발의 시작을 빅뱅과 같이 애니메이션으로 표현하였습니다.
