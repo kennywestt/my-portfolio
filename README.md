@@ -1,37 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧑‍💻 Portfolio - 이경근
 
-## Getting Started
+![cover](public/porfolio_project_part.png)
 
-First, run the development server:
+개발자 이경근의 포트폴리오 웹사이트입니다.
+개발의 시작을 빅뱅과 같이 애니메이션으로 표현하였습니다.
+Next.js, TypeScript, TailwindCSS, Three.js 등을 활용해 제작하였으며
+반응형 인터페이스와 인터랙티브한 UI/UX 구성에 중점을 두었습니다.
+
+---
+
+## 🔗 배포 주소
+
+- 👉 [포트폴리오 보러가기](https://my-portfolio.vercel.app)
+
+---
+
+## 🛠 사용 기술 스택
+
+| 기술         | 설명                             |
+|--------------|----------------------------------|
+| **Next.js**  | 정적/SSR 지원 React 프레임워크     |
+| **React.js** | UI 컴포넌트 기반 프론트엔드 라이브러리 |
+| **TypeScript** | 정적 타입을 지원하는 JavaScript 슈퍼셋 |
+| **TailwindCSS** | 유틸리티 기반 CSS 프레임워크 |
+| **Three.js** | 3D 애니메이션 배경 구성 |
+
+---
+
+## 📁 프로젝트 구조
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+my-portfolio/
+├── public/             # 공개 이미지 및 정적 자산
+├── src/
+│   ├── components/     # UI 구성 컴포넌트
+│   ├── pages/          # 라우팅 페이지
+│   ├── styles/         # Tailwind 설정 및 전역 스타일
+│   └── utils/          # (필요 시) 유틸 함수
+├── .eslintrc.json      # ESLint 설정
+├── tailwind.config.js  # TailwindCSS 설정
+├── tsconfig.json       # TypeScript 설정
+└── README.md
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
