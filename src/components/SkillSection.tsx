@@ -24,118 +24,103 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "TypeScript",
           icon: () => <SiTypescript className="text-blue-500" />,
-          description: "정적 타입으로 더 견고한 코드 작성이 가능합니다.",
+          description: "정적 타입으로 코드 작성을 해봤습니다.",
         },
         {
           name: "Dart",
           icon: () => <SiDart className="text-cyan-500" />,
-          description: "Flutter 앱 개발에 활용 가능한 언어입니다.",
+          description: "Dart 문법을 배워 블로그에 정리하면서 공부했습니다.",
         },
         {
           name: "Python",
           icon: () => <FaPython className="text-blue-500" />,
-          description: "간결한 문법으로 데이터 처리, 간단한 자동화에 사용합니다.",
+          description: "학부 시절 Python 기본적인 프로그래밍 배웠웠습니다.",
         },
         {
           name: "Java",
           icon: () => <FaJava className="text-orange-600" />,
-          description: "기초를 탄탄하게 쌓은 객체지향 언어, 학교 과제와 프로그램에 활용.",
+          description: "학부 시절 자바를 학습하며 OOP에 대한 기본기를 다졌습니다.",
         },
         {
           name: "C",
           icon: () => <SiC className="text-blue-800" />,
-          description: "기본적인 알고리즘 구현 및 시스템 프로그래밍에 사용했습니다.",
+          description: "학부 시절 C 언어를 학습하여 기본적인 개념과 알고리즘을 이해.",
         },
         {
           name: "C++",
           icon: () => <SiCplusplus className="text-blue-400" />,
-          description: "객체지향 및 고성능 코딩 경험을 갖고 있습니다.",
+          description: "학부시절 간단하게 배운 적이 있습니다.",
         },
         {
           name: "Kotlin",
           icon: () => <SiKotlin className="text-purple-500" />,
-          description: "Android 앱 개발 및 간단한 프로젝트에 사용.",
+          description: "Android 앱 개발 및 간단한 프로젝트에 사용했습니다.",
         },
         {
           name: "Swift",
           icon: () => <FaSwift className="text-orange-400" />,
-          description: "iOS 앱 개발 입문 경험이 있습니다.",
+          description: "IOS 앱 개발 입문 경험이 있습니다.",
         },
       ],
       Frontend: [
         {
           name: "React",
           icon: () => <FaReact className="text-cyan-400" />,
-          description: "재사용성 높은 컴포넌트 기반 UI 개발 경험이 풍부합니다.",
+          description: "재사용성 높은 컴포넌트 기반 UI 개발 경험이 있습니다다.",
         },
         {
           name: "React Native",
           icon: () => <TbBrandReactNative className="text-blue-400" />,
-          description: "모바일 앱 크로스플랫폼 개발에 활용합니다.",
+          description: "모바일 앱 크로스플랫폼 개발에 활용.",
         },
         {
           name: "HTML5",
           icon: () => <FaHtml5 className="text-orange-500" />,
-          description: "웹 표준을 지키는 시멘틱 마크업 가능합니다.",
+          description: "웹 표준을 지키는 시멘틱 마크업 가능.",
         },
         {
           name: "CSS3",
           icon: () => <FaCss3Alt className="text-blue-400" />,
-          description: "반응형, 다양한 UI 스타일링에 익숙합니다.",
+          description: "반응형, 다양한 UI 스타일링에 익숙함.",
         },
         {
           name: "SCSS",
           icon: () => <SiSass className="text-pink-400" />,
-          description: "모듈화와 가독성 높은 스타일 작업에 활용합니다.",
+          description: "SCSS의 네스팅 기능을 사용하여 코드 구조를 더 직관적으로 만들었습니다.",
         },
         {
           name: "Tailwind CSS",
           icon: () => <SiTailwindcss className="text-cyan-400" />,
-          description: "유틸리티 퍼스트 CSS로 생산성과 일관성 있는 개발이 가능합니다.",
+          description: "개인 포트폴리오 UI를 반응형 디자인과 Three.js을 활용하여 개발.",
         },
         {
           name: "Flutter",
           icon: () => <SiFlutter className="text-sky-400" />,
-          description: "크로스플랫폼 앱 UI를 빠르게 제작할 수 있습니다.",
-        },
-        {
-          name: "Vue.js",
-          icon: () => <SiVuedotjs className="text-green-400" />,
-          description: "간결한 구조의 컴포넌트 기반 프론트엔드 경험이 있습니다.",
+          description: "Dart 언어를 사용해 간단한 기능을 만들어 본 적 있음.",
         },
       ],
       Backend: [
         {
           name: "Node.js",
           icon: () => <FaNodeJs className="text-green-600" />,
-          description: "비동기 처리와 간단한 API 서버 개발이 가능합니다.",
+          description: "비동기 처리와 간단한 API 서버 개발이 가능.",
         },
         {
           name: "Firebase",
           icon: () => <SiFirebase className="text-yellow-400" />,
           description: "Authentication, 실시간 DB, 배포 등 다양한 기능 활용 경험.",
         },
-        {
-          name: "TypeScript",
-          icon: () => <SiTypescript className="text-blue-600" />,
-          description: "Node.js 백엔드에서도 정적 타입으로 안정적인 개발이 가능합니다.",
-        },
       ],
       Database: [
         {
           name: "MariaDB",
           icon: () => <SiMariadb className="text-blue-700" />,
-          description: "MySQL과 호환되는 RDBMS. SQL 쿼리 작성 경험이 풍부합니다.",
-        },
-        {
-          name: "MySQL",
-          icon: () => <SiMysql className="text-blue-600" />,
-          description: "관계형 데이터 모델링 및 쿼리 최적화 경험.",
+          description: "호텔 예약 시스템에서 사용자 정보와 예약 데이터를 관리.",
         },
         {
           name: "MySQL Workbench",
           icon: () => <SiMysql className="text-blue-500" />,
-          description: "ERD 설계와 쿼리 테스트에 사용.",
+          description: "호텔사이트 호스팅을 하기 위해서 사용했습니다.",
         },
         {
           name: "Firebase",
@@ -147,12 +132,12 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "Git",
           icon: () => <FaGit className="text-red-400" />,
-          description: "프로젝트 버전 관리 및 협업 경험이 많습니다.",
+          description: "프로젝트 버전 관리 및 협업 경험.",
         },
         {
           name: "GitHub",
           icon: () => <FaGithub className="text-black" />,
-          description: "코드 공개, 협업, 이슈 관리, CI 등 다양하게 사용합니다.",
+          description: "코드 공개, 협업 등 형상관리를 사용.",
         },
         {
           name: "Sourcetree",
@@ -172,7 +157,7 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "Xcode",
           icon: () => <SiXcode className="text-blue-500" />,
-          description: "Swift, iOS 앱 개발 입문 경험.",
+          description: "학부시절 Swift, IOS 앱 개발 입문 경험.",
         },
       ],
     };
