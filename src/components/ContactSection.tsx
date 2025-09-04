@@ -20,7 +20,7 @@ export default function ContactSection() {
       <section id="contact" className="relative py-20 [background-color:rgba(20,23,38,1)]
         rounded-t-2xl mx-auto">
         <div className="max-w-screen-xl mx-auto px-6 text-center text-white">
-          <h2 className="text-3xl font-bold mb-6 mb-24 text-white ">Let's Contact</h2>
+          <h2 className="text-3xl font-bold mb-6 mb-24 text-white ">Let&apos;s Contact</h2>
           <p className="mb-2 text-white">문의나 피드백이 있다면 아래 이메일로 언제든 연락해주시면 감사하겠습니다.</p>
           <div className="flex flex-col items-center justify-center mb-8">
             <button 
