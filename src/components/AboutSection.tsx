@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <div className="bg-black min-h-screen w-full">
       <section id="about" className="relative z-10 pt-24 pb-24 px-4 sm:px-8 md:px-12 min-h-screen
-        [background-color:rgba(20,23,38,1)] border-t border-gray-700/70 shadow-xl
+        [background-color:rgba(20,23,38,1)] border-t border-gray-700/70 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.3)]
         rounded-t-2xl mx-auto"
       >
         <div className="max-w-screen-xl mx-auto md:px-36">
@@ -36,7 +36,7 @@ export default function AboutSection() {
           </div>
 
           {/* Q1 */}
-          <div className="mb-10">
+          {/* <div className="mb-10">
             <h3 className="text-2xl font-semibold text-slate-300 mb-2">
               Q1. 새로운 기술은 어떻게 배우시나요?
             </h3>
@@ -49,12 +49,12 @@ export default function AboutSection() {
                 꾸준히 노력 중입니다.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Q2 */}
           <div className="mb-10">
             <h3 className="text-2xl font-semibold text-slate-300 mb-2">
-              Q2. 협업에서 가장 중요하게 생각하는 것은 무엇인가요?
+              Q1) 협업에서 가장 중요하게 생각하는 것은 무엇인가요?
             </h3>
             <div className="p-6 bg-gray-800 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300">
               <p className="text-gray-300 leading-relaxed">
@@ -67,10 +67,10 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Q3 */}
+          {/* Q2 */}
           <div className="pb-48">
             <h3 className="text-2xl font-semibold text-slate-300 mb-2">
-              Q3. 개발자로서 이루고 싶은 목표는 무엇인가요?
+              Q2) 개발자로서 이루고 싶은 목표는 무엇인가요?
             </h3>
             <div className="p-6 bg-gray-800 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300">
               <p className="text-gray-300 leading-relaxed">
