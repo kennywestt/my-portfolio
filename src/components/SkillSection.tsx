@@ -1,6 +1,6 @@
 import { JSX, useState } from "react";
-import { FaJs, FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGit, FaSwift, FaAndroid, FaGithub } from "react-icons/fa";
-import { SiDart, SiFlutter, SiTypescript, SiFirebase, SiMariadb, SiKotlin, SiC, SiCplusplus, SiSass, SiTailwindcss, SiSourcetree, SiMysql, SiXcode } from "react-icons/si";
+import { FaJs, FaPython, FaJava, FaReact, FaNodeJs, FaGit, FaSwift, FaAndroid } from "react-icons/fa";
+import { SiTypescript, SiFirebase, SiMariadb, SiKotlin, SiC, SiSass, SiTailwindcss, SiSourcetree, SiMysql, SiXcode } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandReactNative } from "react-icons/tb";
 
