@@ -26,11 +26,11 @@ const SKILL_LIST: Record<Category, Skill[]> = {
           icon: () => <SiTypescript className="text-blue-500" />,
           description: "정적 타입으로 코드 작성을 해봤습니다.",
         },
-        {
-          name: "Dart",
-          icon: () => <SiDart className="text-cyan-500" />,
-          description: "Dart 문법을 배워 블로그에 정리하면서 공부했습니다.",
-        },
+        // {
+        //   name: "Dart",
+        //   icon: () => <SiDart className="text-cyan-500" />,
+        //   description: "Dart 문법을 배워 블로그에 정리하면서 공부했습니다.",
+        // },
         {
           name: "Python",
           icon: () => <FaPython className="text-blue-500" />,
@@ -46,11 +46,11 @@ const SKILL_LIST: Record<Category, Skill[]> = {
           icon: () => <SiC className="text-blue-800" />,
           description: "학부 시절 C 언어를 학습하여 기본적인 개념과 알고리즘을 이해.",
         },
-        {
-          name: "C++",
-          icon: () => <SiCplusplus className="text-blue-400" />,
-          description: "학부시절 간단하게 배운 적이 있습니다.",
-        },
+        // {
+        //   name: "C++",
+        //   icon: () => <SiCplusplus className="text-blue-400" />,
+        //   description: "학부시절 간단하게 배운 적이 있습니다.",
+        // },
         {
           name: "Kotlin",
           icon: () => <SiKotlin className="text-purple-500" />,
@@ -59,7 +59,7 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "Swift",
           icon: () => <FaSwift className="text-orange-400" />,
-          description: "IOS 앱 개발 입문 경험이 있습니다.",
+          description: "학부생때 IOS 앱 개발 입문 경험이 있습니다.",
         },
       ],
       Frontend: [
@@ -73,16 +73,16 @@ const SKILL_LIST: Record<Category, Skill[]> = {
           icon: () => <TbBrandReactNative className="text-blue-400" />,
           description: "모바일 앱 크로스플랫폼 개발에 활용.",
         },
-        {
-          name: "HTML5",
-          icon: () => <FaHtml5 className="text-orange-500" />,
-          description: "웹 표준을 지키는 시멘틱 마크업 가능.",
-        },
-        {
-          name: "CSS3",
-          icon: () => <FaCss3Alt className="text-blue-400" />,
-          description: "반응형, 다양한 UI 스타일링에 익숙함.",
-        },
+        // {
+        //   name: "HTML5",
+        //   icon: () => <FaHtml5 className="text-orange-500" />,
+        //   description: "웹 표준을 지키는 시멘틱 마크업 가능.",
+        // },
+        // {
+        //   name: "CSS3",
+        //   icon: () => <FaCss3Alt className="text-blue-400" />,
+        //   description: "반응형, 다양한 UI 스타일링에 익숙함.",
+        // },
         {
           name: "SCSS",
           icon: () => <SiSass className="text-pink-400" />,
@@ -91,25 +91,25 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "Tailwind CSS",
           icon: () => <SiTailwindcss className="text-cyan-400" />,
-          description: "개인 포트폴리오 UI를 반응형 디자인과 Three.js을 활용하여 개발.",
+          description: "포트폴리오 UI를 반응형 디자인 구현하고, Three.js을 활용하여 개발.",
         },
-        {
-          name: "Flutter",
-          icon: () => <SiFlutter className="text-sky-400" />,
-          description: "Dart 언어를 사용해 간단한 기능을 만들어 본 적 있음.",
-        },
+        // {
+        //   name: "Flutter",
+        //   icon: () => <SiFlutter className="text-sky-400" />,
+        //   description: "Dart 언어를 사용해 간단한 기능을 만들어 본 적 있음.",
+        // },
       ],
       Backend: [
         {
           name: "Node.js",
           icon: () => <FaNodeJs className="text-green-600" />,
-          description: "비동기 처리와 간단한 API 서버 개발이 가능.",
+          description: "비동기 처리와 Request, Respond, TossPayment API 서버 개발이 가능.",
         },
-        {
-          name: "Firebase",
-          icon: () => <SiFirebase className="text-yellow-400" />,
-          description: "Authentication, 실시간 DB, 배포 등 다양한 기능 활용 경험.",
-        },
+        // {
+        //   name: "Firebase",
+        //   icon: () => <SiFirebase className="text-yellow-400" />,
+        //   description: "Authentication, 실시간 DB 등 다양한 기능 활용 경험.",
+        // },
       ],
       Database: [
         {
@@ -120,12 +120,12 @@ const SKILL_LIST: Record<Category, Skill[]> = {
         {
           name: "MySQL Workbench",
           icon: () => <SiMysql className="text-blue-500" />,
-          description: "호텔사이트 호스팅을 하기 위해서 사용했습니다.",
+          description: "호텔사이트 호스팅을 하기 위해서 사용하였습니다.",
         },
         {
           name: "Firebase",
           icon: () => <SiFirebase className="text-yellow-400" />,
-          description: "NoSQL 구조의 실시간 데이터베이스 활용.",
+          description: "Authentication, NoSQL 구조의 실시간 데이터베이스 활용.",
         },
       ],
       ETC: [
@@ -134,11 +134,11 @@ const SKILL_LIST: Record<Category, Skill[]> = {
           icon: () => <FaGit className="text-red-400" />,
           description: "프로젝트 버전 관리 및 협업 경험.",
         },
-        {
-          name: "GitHub",
-          icon: () => <FaGithub className="text-black" />,
-          description: "코드 공개, 협업 등 형상관리를 사용.",
-        },
+        // {
+        //   name: "GitHub",
+        //   icon: () => <FaGithub className="text-black" />,
+        //   description: "코드 공개, 협업 등 형상관리를 사용.",
+        // },
         {
           name: "Sourcetree",
           icon: () => <SiSourcetree className="text-blue-500" />,
