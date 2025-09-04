@@ -7,8 +7,8 @@ export default function Header() {
   <h1 className="flex-1 text-center text-2xl md:text-3xl font-bold text-white">PORTFOLIO</h1>
   {/* 오른쪽: 링크 */}
   <nav className="flex-1 flex justify-end gap-4">
+  <a href="https://kennywest.tistory.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition">Blog</a>
     <a href="https://github.com/kennywestt" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition">GitHub</a>
-    <a href="https://kennywest.tistory.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition">Tistory</a>
   </nav>
 </header>
   );
