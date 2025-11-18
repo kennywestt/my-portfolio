@@ -3,7 +3,6 @@
 ![cover](public/porfolio_main.png)
 
 개발자 이경근의 포트폴리오 웹사이트입니다.<br>
-개발의 시작을 빅뱅과 같이 애니메이션으로 표현하였습니다.<br>
 Next.js, TypeScript, TailwindCSS, Three.js 등을 활용해 제작하였으며<br>
 반응형 인터페이스와 인터랙티브한 UI/UX 구성에 중점을 두었습니다.<br>
 
@@ -21,7 +20,7 @@ Next.js, TypeScript, TailwindCSS, Three.js 등을 활용해 제작하였으며<b
 |--------------|----------------------------------|
 | **Next.js**  | 정적/SSR 지원 React 프레임워크     |
 | **React.js** | UI 컴포넌트 기반 프론트엔드 라이브러리 |
-| **TypeScript** | 정적 타입을 지원하는 JavaScript 슈퍼셋 |
+| **TypeScript** | 정적 타입을 지원하는 JavaScript |
 | **TailwindCSS** | 유틸리티 기반 CSS 프레임워크 |
 | **Three.js** | 3D 애니메이션 배경 구성 |
 
